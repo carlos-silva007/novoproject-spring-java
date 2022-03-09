@@ -3,27 +3,20 @@ package com.example.curso.entities;
 import java.io.Serializable;
 import java.util.Objects;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-
-@Entity
 public class User implements Serializable {
 
-	
 	private static final long serialVersionUID = 1L;
 
-	@Id
-	@Column
 	private Long id;
 	private String nome;
 	private String email;
-	private Integer telefone;
-	private Integer password;
-	
-	public User() {}
+	private String telefone;
+	private String password;
 
-	public User(Long id, String nome, String email, Integer telefone, Integer password) {
+	public User() {
+	}
+
+	public User(Long id, String nome, String email, String telefone, String password) {
 		super();
 		this.id = id;
 		this.nome = nome;
@@ -56,19 +49,19 @@ public class User implements Serializable {
 		this.email = email;
 	}
 
-	public Integer getTelefone() {
+	public String getTelefone() {
 		return telefone;
 	}
 
-	public void setTelefone(Integer telefone) {
+	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
 
-	public Integer getPassword() {
+	public String getPassword() {
 		return password;
 	}
 
-	public void setPassword(Integer password) {
+	public void setPassword(String password) {
 		this.password = password;
 	}
 
@@ -95,10 +88,4 @@ public class User implements Serializable {
 				+ password + "]";
 	}
 
-	
-	
-	
-	
-	
-	
 }
