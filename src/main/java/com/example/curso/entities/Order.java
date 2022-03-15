@@ -13,7 +13,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "tb_order")
+@Table(name = "tb_order") //nome da tabela
 public class Order implements Serializable{
 
 	
@@ -24,8 +24,8 @@ public class Order implements Serializable{
 	private Long id;
 	private Instant momento;
 	
-	@ManyToOne
-	@JoinColumn(name = "client_id")
+	@ManyToOne  //associaçao muitos pra um
+	@JoinColumn(name = "client_id")  //chave pk
 	private User client;
 
 	public Order() {

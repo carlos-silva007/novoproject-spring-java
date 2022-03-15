@@ -12,7 +12,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "tb_user")
+@Table(name = "tb_user")  //nome da tabela
 public class User implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -26,7 +26,7 @@ public class User implements Serializable {
 	private String telefone;
 	private String password;
 	
-	@OneToMany(mappedBy = "client")
+	@OneToMany(mappedBy = "client")  //associação um pra muitos
 	private List<Order> orders = new ArrayList<>();
 		
 
